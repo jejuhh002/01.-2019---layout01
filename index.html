@@ -1,64 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        background: #c8e6c9;
-      }
-      #wrap {
-        width: 1000px;
-        height: 900px;
-        margin: 0 auto; /*위 아래 마진=0 , 좌우 마진=자동 가운데*/
-        font-size: 40px;
-        color: #fff;
-        text-align: center;
-        text-transform: uppercase; /*대문자*/
-      }
-      #header {
-        width: 1000px;
-        height: 100px;
-        line-height: 100px; /*text가 한줄 일때 (블럭div height값)과 같은 값을 주면 가운데에 위치*/
-        background: #2e7d32;
-      }
-      #nav {
-        width: 1000px;
-        height: 100px;
-        line-height: 100px;
-        background: #388e3c;
-      }
-      #side {
-        float: left; /*블럭div를 인라인처럼 왼쪽으로 붙여라*/
-        width: 300px;
-        height: 600px;
-        line-height: 600px;
-        background: #43a047;
-      }
-      #contents {
-        float: left;
-        width: 700px;
-        height: 600px;
-        line-height: 600px;
-        background: #4caf50;
-      }
-      #footer {
-        float: left;
-        width: 1000px;
-        height: 100px;
-        line-height: 100px;
-        background: #66bb6a;
-      }
-    </style>
+    <title>jejuhh002.neocities.org</title>
   </head>
+  <!--카카오지도 jejuhh002@gmail.com S*1-->
+  <!--https://jejuhh002.neocities.org/--- neocities.org 무료호스팅 jejuhh002@gmail.com-->
   <body>
-    <div id="wrap">
-      <div id="header">header</div>
-      <div id="nav">nav</div>
-      <div id="side">side</div>
-      <div id="contents">contents</div>
-      <div id="footer">footer</div>
-    </div>
+    <div id="map" style="width: 1900px; height: 900px"></div>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=35e2f256c195ad49897e26d72fb30587"
+    ></script>
+    <script>
+      var container = document.getElementById('map');
+      var options = {
+        center: new kakao.maps.LatLng(33.48977127978618, 126.48646996980008),
+        level: 3,
+      };
+
+      var map = new kakao.maps.Map(container, options);
+    </script>
   </body>
 </html>
